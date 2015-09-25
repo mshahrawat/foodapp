@@ -1,0 +1,98 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  /*padding-top: 50px;*/
+  padding-bottom: 20px;
+}
+.jumbotron {
+	/*background: url("assets/img/background.jpg") no-repeat;
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	background-size: 100%;*/
+    background: url(images/cubedfood-dark.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-color: #e6cf8b;
+    background-size: cover;
+	height:675px;  
+	padding-bottom: 20px;
+	margin-bottom:0px;
+	color:white;
+}
+
+
+#center {
+	text-align: center;
+}
+
+#logo {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 300px;
+}
+
+#foot {
+	text-align: center;
+	color: #22264b;
+}
+
+#go {
+	background-color: #b56969;
+	margin-left: auto;
+    margin-right: auto;
+    border: #b56969;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#foodtable {
+	color: #22264b;
+}
+
+#input {
+	background-color: #22264b;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	color: #e8edf3;
+}
+
+#about {
+	background-color: #b56969;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	color: #e8edf3;
+}
+
+#one {
+	background-color: #DC143C ;
+}
+
+#two {
+	background-color: #FFA500 ;
+}
+
+#three {
+	background-color: #FFD700 ;
+}
+
+#four {
+	background-color: #9ACD32 ;
+}
+
+#five {
+	background-color: #00CF67 ;
+}
+
+#feedme {
+	background-color: #b56969;
+	margin-left: auto;
+    margin-right: auto;
+    border: #b56969;
+    color: #e8edf3;
+}

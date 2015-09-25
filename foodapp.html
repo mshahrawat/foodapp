@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Hungry and Confused</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body id="bodyy">
+
+    <div class="jumbotron">
+
+      <div class="container" id="main">
+        <h1 id="center">Hungry AND Confused?</h1>
+        <img id="logo" src="images/logo_grouped.png">
+                
+        <h3 id="center">Starving? Too many choices? What a struggle. <br>
+        
+        <h4 id="center">We all know this struggle far too well. But no worries, we can help you out! Tell us some of your food choices that you can't decide between and we'll tell what is the best food to eat based on your health preferences. Because #firstworldproblems </h4>
+        <br>
+        <div class="span7 text-center"> <a class="btn btn-success btn-lg" href="#input" id="go">Let's do this</a> </div>
+      </div>
+
+    </div>
+
+    <div id="input">
+      <div class="container" id="input" style="padding-bottom:20px;">
+        <h2>How healthy do you want to be?</h2>
+        <p>1 is the least healthy option and 5 is the most healthy.</p>
+          <div class="btn-group" id="move">
+            <button type="button" class="btn btn-primary" id="one" onClick="numCheck1()">1</button>
+            <button type="button" class="btn btn-primary" id="two" onClick="numCheck2()">2</button>
+            <button type="button" class="btn btn-primary" id="three" onClick="numCheck3()">3</button>
+            <button type="button" class="btn btn-primary" id="four" onClick="numCheck4()">4</button>
+            <button type="button" class="btn btn-primary" id="five" onClick="numCheck5()">5</button>
+          </div>
+          <button type="button" class="btn btn-primary" id="zero" onClick="numCheck0()">Don't care, just hungry</button>
+
+
+        <h2>Tell us your options!</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Food option here" id="foood" onkeydown="if (event.keyCode == 13) document.getElementById('do').click()">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="do" onClick="addRow()">Add Food!</button>
+              </span>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="panel panel-default">
+
+          <!-- Table -->
+          <table class="table" id="foodtable">
+            <tr id="grey">
+              <th id="inputtedfoods">Inputted Foods:</th>
+            </tr>
+          </table>
+        </div>
+        <button class="btn btn-success btn-lg" type="button" onClick="printFood(foods)" id="feedme">Help feed me!</button>
+        <h1 id="printed">calculating...<small> because we're thinking about food even when you're not</small></h1>
+        <img id ="foodphoto" src="http://www.fcbc.net/archangel/woa/temp/40/public/images/Eat-Stop-Eat-healthy-eating.jpg">
+      </div>
+    </div>
+
+  
+    <div id="about">
+    <div class="container" id="about" style="padding-bottom:20px;">
+      <h2>About</h2>
+      <p> Many people face this problem in their everyday lives. We all know this struggle too well when you just have too many choices to eat, but you simply can't choose which is the right one. But we are here to help and make a positive impact on society. Hold up the line no more. Spend less time deciding and more time doing what really matters: eating. 
+      <br><br>
+      Our service is able to take in all your available food options you are deciding between and tell you almost instantly which is the best choice of food to eat. Use this anytime, anywhere whenever you're hungry and don't want to go through the stress of decision making. Another feature of our service is the health meter! We even include how healthy you want your food choice to be. If you don't know which is the best option for your health, we got you covered! Just by selecting a health value, you can can the best food for your body. Because if you're going to eat, might as well eat healthy. 
+      <br><br>
+      It is our hope that you will use our service in your toughest of times, and remember: <strong>food is life</strong>. 
+      <br><br> Made with love by yours truly, <br>the Hungry and Confused People of MIT <3
+
+      <br><br><i> iOS app coming soon! </i></p> 
+
+    </div>
+  </div>
+
+      <hr>
+
+      <div id="footer">
+        <div class="container">
+          <p> </p>
+            <p id="foot"> &copy; The Hungry and Confused People 2015, All Rights Reserved.</p>
+      </div>
+      </div>
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="../../dist/js/bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/popover.js"></script>
+
+    <script>
+      var health = 0
+      function numCheck1() {
+          health = 1
+      }
+    </script>
+
+    <script>
+      var health = 0
+      function numCheck2() {
+          health = 2
+      }
+    </script>
+
+    <script>
+      var health = 0
+      function numCheck3() {
+          health = 3
+      }
+    </script>
+
+    <script>
+      var health = 0
+      function numCheck4() {
+          health = 4
+      }
+    </script>
+
+    <script>
+      var health = 0
+      function numCheck5() {
+          health = 5
+      }
+    </script>
+
+    <script>
+      var health = 0
+      function numCheck0() {
+          health = 0
+      }
+    </script>
+
+    <script>
+        var foods = []
+        var foodsSingle = []
+        var healthy = ["salad", "spinach", "broccoli", "lettuce", "peas", "asparagus", "cabbage", "carrots", "onions", "garlic", "artichokes", "fat-free", "lean", "low-fat", "yogurt", "olive", "tomato", "zucchini", "pepper", "whole", "skim", "fruit", "olive", "fresh", "strawberry", "banana", "apple", "blueberry", "raspberry", "cucumber", "squash", "cauliflower", "kale", "bean", "tofu", "lentil", "avocado", "avocado", "organic", "wheat", "natural", "salmon", "beet", "cantaloupe", "cherry", "chestnut", "grape", "orange", "peach", "honey", "fish", "veggie", "mango", "granola", "sushi", "celery", "leek", "apricot", "papaya", "kiwi", "plum", "almond"];
+        var unhealthy=["fried", "chocolate", "cream", "cake", "muffin", "butter", "cookie", "chips", "cheese", "donut", "bagel"]
+        
+        function addRow() {
+           "use strict";
+
+            var table = document.getElementById("foodtable");
+            var row= document.createElement("tr");
+            var td1 = document.createElement("td");  
+            var td2 = document.createElement("td"); 
+
+            var option = document.getElementById("foood").value;
+            td1.innerHTML = option
+            row.appendChild(td1);
+
+            /*var addedbtn = document.createElement("button")
+            var t = document.createTextNode("delete");
+            addedbtn.appendChild(t)
+            td2.innerHTML = addedbtn
+            row.appendChild(td2);*/
+            
+
+            table.children[0].appendChild(row);
+            foodsSingle.push(document.getElementById("foood").value);
+
+            for (var i = 0; i < 10; i++) {
+              foods.push(document.getElementById("foood").value);
+            }
+
+            foood.value = ""
+            }
+    </script>
+
+    <script>
+      function printFood(foods) {
+
+            for (var k = 0; k < foodsSingle.length; k++){
+              for (var f = 0; f < unhealthy.length; f++){
+                if(foodsSingle[k].indexOf(unhealthy[f])>=0){
+                  for(var j=0; j<health; j++){
+                    var index = foods.indexOf(foodsSingle[k])
+                    foods.splice(index, 1) 
+                  }
+                }
+              }
+            }
+
+            for (var a = 0; a < foodsSingle.length; a++){
+              for (var b = 0; b < healthy.length; b++){
+                if(foodsSingle[a].indexOf(healthy[b])>=0){
+                  for(var j=0; j<health; j++){
+                    foods.push(foodsSingle[a])
+                  }
+                }
+              }
+            }
+
+        var lenFoods = foods.length
+        var pick = Math.floor((Math.random() * lenFoods) + 1)
+
+        var head = document.getElementById("printed")
+        var choice = foods[pick-1]
+        head.innerHTML = choice
+        choicepic = String(choice)
+        var picurl = "http://loremflickr.com/320/240/"+choicepic
+
+        var foodpic = document.getElementById("foodphoto").src=picurl
+      }
+    </script>
+
+  </body>
+</html>
